@@ -42,7 +42,6 @@ const isItemInStock = html => {
 };
 
 const urls = [
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_Living_Card_Game_LCG_Core_Set.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Khazad-Dum_Campaign_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Black_Riders_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Flame_Of_The_West_Saga_Expansion.html',
