@@ -47,7 +47,6 @@ const urls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Flame_Of_The_West_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Land_Of_Shadow_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Road_Darkens_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Mountain_Of_Fire_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Conflict_At_The_Carrock_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hunt_For_Gollum_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Dead_Marshes_Adventure_Pack.html',
