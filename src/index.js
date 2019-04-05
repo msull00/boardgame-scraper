@@ -54,6 +54,10 @@ const urls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Return_to_Mirkwood_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Redhorn_Gate_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Grey_Havens_Deluxe_Expansion.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hobbit_On_The_Doorstep_Saga_Expansion.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Voice_of_Isengard_Expansion.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Stewards_Fear_Adventure_Pack.html',
 ];
 
 const promises = urls.map(url => axios.get(url));
