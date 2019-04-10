@@ -43,9 +43,7 @@ const isItemInStock = html => {
 
 const urls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Khazad-Dum_Campaign_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Black_Riders_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Flame_Of_The_West_Saga_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Land_Of_Shadow_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Road_Darkens_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Conflict_At_The_Carrock_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hunt_For_Gollum_Adventure_Pack.html',
