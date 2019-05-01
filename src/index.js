@@ -43,17 +43,22 @@ const isItemInStock = html => {
 
 const urls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Khazad-Dum_Campaign_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Flame_Of_The_West_Saga_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Road_Darkens_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Conflict_At_The_Carrock_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hunt_For_Gollum_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Dead_Marshes_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Redhorn_Gate_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Grey_Havens_Deluxe_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hobbit_On_The_Doorstep_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Voice_of_Isengard_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Stewards_Fear_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Flight_Of_The_Stormcaller_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Temple_Of_The_Deceived_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Dread_Realm_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Wastes_Of_Eriador_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Treachery_Of_Rhudaur_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Morgul_Vale_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Assault_On_Osgiliath_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Foundations_Of_Stone_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Long_Dark_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Watcher_In_The_Water_Adventure_Pack.html',
+  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Road_To_Rivendell_Adventure_Pack.html',
 ];
 
 const promises = urls.map(url => axios.get(url));
