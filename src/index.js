@@ -62,9 +62,52 @@ const urls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Black_Serpent_Adventure_Pack.html',
 ];
 
-const promises = urls.map(url => axios.get(url));
+const ffgSKUs = [
+  {
+    sku: 'MEC24',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hobbit-on-the-doorstep/',
+  },
+  {
+    sku: 'MEC65',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/wilds-rhovanion/',
+  },
+  {
+    sku: 'MEC09',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-redhorn-gate-1',
+  },
+  {
+    sku: 'MEC10',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/road-to-rivendell',
+  },
+  {
+    sku: 'MEC11',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-watcher-in-the-water',
+  },
+  {
+    sku: 'MEC12',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-long-dark-1',
+  },
+  {
+    sku: 'MEC13',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/foundations-of-stone-1',
+  },
+  {
+    sku: 'MEC14',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/shadow-and-flame-1',
+  },
+];
 
-Promise.all(promises).then(responses => {
+const htmlPromises = urls.map(url => axios.get(url));
+
+Promise.all(htmlPromises).then(responses => {
   const itemsInStock = responses.reduce((items, response) => {
     if (response.status !== 200) {
       return items;
@@ -80,5 +123,28 @@ Promise.all(promises).then(responses => {
   if (itemsInStock.length) {
     console.log('There are items in stock!');
     sendEmail(createEmail(itemsInStock));
+  }
+});
+
+const apiPromises = ffgSKUs.map(({ sku }) =>
+  axios.get(`https://shop.fantasyflightgames.com/api/v1/stockrecord/${sku}/level/`)
+);
+
+Promise.all(apiPromises).then(responses => {
+  const itemsInStock = responses.reduce((items, response) => {
+    if (response.status !== 200) {
+      return items;
+    }
+
+    if (response.data['in_stock'] !== 'available') {
+      return items;
+    }
+
+    return [...items, ffgSKUs.find(({ sku }) => sku === response.data['product_code']).url];
+  }, []);
+
+  if (itemsInStock.length) {
+    console.log('There are items in stock!');
+    // sendEmail(createEmail(itemsInStock));
   }
 });
