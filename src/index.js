@@ -145,6 +145,6 @@ Promise.all(apiPromises).then(responses => {
 
   if (itemsInStock.length) {
     console.log('There are items in stock!');
-    // sendEmail(createEmail(itemsInStock));
+    sendEmail(createEmail(itemsInStock));
   }
 });
