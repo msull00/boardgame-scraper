@@ -65,11 +65,6 @@ const ffgSKUs = [
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hobbit-on-the-doorstep/',
   },
   {
-    sku: 'MEC65',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/wilds-rhovanion/',
-  },
-  {
     sku: 'MEC09',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-redhorn-gate-1',
