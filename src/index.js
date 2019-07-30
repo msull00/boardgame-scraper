@@ -1,6 +1,8 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const nodemailer = require('nodemailer');
+const { from, merge } = require('rxjs');
+const { map, mergeAll, filter, toArray } = require('rxjs/operators');
 require('dotenv').config();
 
 const sendEmail = async html => {
@@ -36,12 +38,7 @@ const createEmail = inStockUrls => {
   }, '')}</ul>`;
 };
 
-const isItemInStock = html => {
-  const $ = cheerio.load(html);
-  return !$('img[src="v8outofstock.gif"]').length;
-};
-
-const urls = [
+const gamesLoreUrls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Redhorn_Gate_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Foundations_Of_Stone_Adventure_Pack.html',
@@ -96,46 +93,42 @@ const ffgSKUs = [
   },
 ];
 
-const htmlPromises = urls.map(url => axios.get(url));
+const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
+const areItemsAvailable = items => items.length > 0;
 
-Promise.all(htmlPromises).then(responses => {
-  const itemsInStock = responses.reduce((items, response) => {
-    if (response.status !== 200) {
-      return items;
-    }
+const isItemInStockOnGamesLore = html => {
+  const $ = cheerio.load(html);
+  return !$('img[src="v8outofstock.gif"]').length;
+};
 
-    if (!isItemInStock(response.data)) {
-      return items;
-    }
+const isItemInStockOnFfg = responseData => responseData['in_stock'] === 'available';
 
-    return [...items, response.config.url];
-  }, []);
-
-  if (itemsInStock.length) {
-    console.log('There are items in stock!');
-    sendEmail(createEmail(itemsInStock));
-  }
-});
-
-const apiPromises = ffgSKUs.map(({ sku }) =>
-  axios.get(`https://shop.fantasyflightgames.com/api/v1/stockrecord/${sku}/level/`)
+// GamesLore scraper stream
+const gamesLore$ = from(gamesLoreUrls).pipe(
+  map(url => from(axios.get(url))),
+  mergeAll(),
+  filter(response => isResponseSuccessful(response) && isItemInStockOnGamesLore(response.data)),
+  map(inStockResponse => inStockResponse.config.url),
+  toArray()
 );
 
-Promise.all(apiPromises).then(responses => {
-  const itemsInStock = responses.reduce((items, response) => {
-    if (response.status !== 200) {
-      return items;
-    }
+// FFG API consumer stream
+const ffgApi$ = from(ffgSKUs).pipe(
+  map(({ sku, url }) =>
+    from(
+      axios.get(`https://shop.fantasyflightgames.com/api/v1/stockrecord/${sku}/level/`, {
+        responseType: 'json',
+        transformResponse: data => Object.assign({}, JSON.parse(data), { sku, url }),
+      })
+    )
+  ),
+  mergeAll(),
+  filter(response => isResponseSuccessful(response) && isItemInStockOnFfg(response.data)),
+  map(inStockResponse => inStockResponse.data.url),
+  toArray()
+);
 
-    if (response.data['in_stock'] !== 'available') {
-      return items;
-    }
-
-    return [...items, ffgSKUs.find(({ sku }) => sku === response.data['product_code']).url];
-  }, []);
-
-  if (itemsInStock.length) {
-    console.log('There are items in stock!');
-    sendEmail(createEmail(itemsInStock));
-  }
-});
+const mergedStreams$ = merge(gamesLore$, ffgApi$);
+mergedStreams$.subscribe(
+  inStockUrls => areItemsAvailable(inStockUrls) && sendEmail(createEmail(inStockUrls))
+);
