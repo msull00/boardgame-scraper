@@ -39,12 +39,6 @@ const createEmail = inStockUrls => {
 };
 
 const gamesLoreUrls = [
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Redhorn_Gate_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Foundations_Of_Stone_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Long_Dark_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Watcher_In_The_Water_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Road_To_Rivendell_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hobbit_On_The_Doorstep_Saga_Expansion.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Stewards_Fear_Adventure_Pack.html',
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Morgul_Vale_Adventure_Pack.html',
@@ -55,43 +49,7 @@ const gamesLoreUrls = [
   'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Black_Serpent_Adventure_Pack.html',
 ];
 
-const ffgSKUs = [
-  {
-    sku: 'MEC24',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hobbit-on-the-doorstep/',
-  },
-  {
-    sku: 'MEC09',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-redhorn-gate-1',
-  },
-  {
-    sku: 'MEC10',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/road-to-rivendell',
-  },
-  {
-    sku: 'MEC11',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-watcher-in-the-water',
-  },
-  {
-    sku: 'MEC12',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-long-dark-1',
-  },
-  {
-    sku: 'MEC13',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/foundations-of-stone-1',
-  },
-  {
-    sku: 'MEC14',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/shadow-and-flame-1',
-  },
-];
+const ffgSKUs = [];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
 const areItemsAvailable = items => items.length > 0;
