@@ -8,7 +8,7 @@ require('dotenv').config();
 const sendEmail = async html => {
   try {
     let transporter = nodemailer.createTransport({
-      service: 'hotmail',
+      service: 'Gmail',
       auth: {
         user: process.env.SCRAPER_USERNAME,
         pass: process.env.SCRAPER_PASSWORD,
