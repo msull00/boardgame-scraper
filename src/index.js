@@ -38,18 +38,21 @@ const createEmail = inStockUrls => {
   }, '')}</ul>`;
 };
 
-const gamesLoreUrls = [
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Hobbit_On_The_Doorstep_Saga_Expansion.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Stewards_Fear_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Morgul_Vale_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Assault_On_Osgiliath_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Mumakil_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Race_Across_Harad_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Beneath_The_Sands_Adventure_Pack.html',
-  'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_The_Black_Serpent_Adventure_Pack.html',
-];
+const gamesLoreUrls = [];  //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
-const ffgSKUs = [];
+const ffgSKUs = [
+  'MEC73',        //Collector's Edition
+  //Shadows of Mirkwood
+  'MEC03',        //Conflict at the Carrock
+  'MEC05',        //The Hills of Emyn Muil
+  'MEC07',        //Return to Mirkwood
+  //Dwarrowdelf
+  'MEC14',        //Shadow and Flame
+  //Against the Shadow
+  'MEC18',        //The Stewards Fear
+  //The Ring-maker Cycle
+  'MEC44',        //The Dread Realm 
+];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
 const areItemsAvailable = items => items.length > 0;
