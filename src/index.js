@@ -41,17 +41,41 @@ const createEmail = inStockUrls => {
 const gamesLoreUrls = [];  //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
 const ffgSKUs = [
-  'MEC73',        //Collector's Edition
-  //Shadows of Mirkwood
-  'MEC03',        //Conflict at the Carrock
-  'MEC05',        //The Hills of Emyn Muil
-  'MEC07',        //Return to Mirkwood
-  //Dwarrowdelf
-  'MEC14',        //Shadow and Flame
-  //Against the Shadow
-  'MEC18',        //The Stewards Fear
-  //The Ring-maker Cycle
-  'MEC44',        //The Dread Realm 
+  {
+    sku: 'MEC73',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/lord-rings-living-card-game-limited-collectors-edition/',
+  },
+  
+  {
+    sku: 'MEC03',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/conflict-at-the-carrock/',
+  },
+  
+   {
+    sku: 'MEC05',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil/',
+  },
+  
+   {
+    sku: 'MEC07',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood/',
+  },
+  
+   {
+    sku: 'MEC18',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-stewards-fear/',
+  },
+  
+   {
+    sku: 'MEC44',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/dread-realm/',
+  },      
 ];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
