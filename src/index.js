@@ -46,14 +46,14 @@ const ffgSKUs = [
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/lord-rings-living-card-game-limited-collectors-edition/',
   },
-  
+ /* 
   {
     sku: 'MEC03',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/conflict-at-the-carrock/',
   },
   
- /*  {
+   {
     sku: 'MEC05',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil/',
