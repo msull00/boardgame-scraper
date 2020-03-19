@@ -53,7 +53,7 @@ const ffgSKUs = [
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/conflict-at-the-carrock/',
   },
   
-   {
+ /*  {
     sku: 'MEC05',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil/',
@@ -64,7 +64,7 @@ const ffgSKUs = [
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood/',
   },
-  
+  */
    {
     sku: 'MEC18',
     url:
