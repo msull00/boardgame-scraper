@@ -38,10 +38,14 @@ const createEmail = inStockUrls => {
   }, '')}</ul>`;
 };
 
-const gamesLoreUrls = 
+const legendesqueUrls = 
   [
+    'https://legendesque.com/product/lord-of-the-rings-lcg-fog-of-the-barrow-downs/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-conflict-at-the-carrock/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-hills-of-emyn-muil/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-stewards-fear/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',    
     'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',
   ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
@@ -95,7 +99,7 @@ const isItemInStockOnGamesLore = html => {
 const isItemInStockOnFfg = responseData => responseData['in_stock'] === 'available';
 
 // GamesLore scraper stream
-const gamesLore$ = from(gamesLoreUrls).pipe(
+const legendesque$ = from(legendesqueUrls).pipe(
   map(url => from(axios.get(url))),
   mergeAll(),
   filter(response => isResponseSuccessful(response) && isItemInStockOnGamesLore(response.data)),
@@ -119,7 +123,7 @@ const ffgApi$ = from(ffgSKUs).pipe(
   toArray()
 );
 
-const mergedStreams$ = merge(gamesLore$, ffgApi$);
+const mergedStreams$ = merge(legendesque$, ffgApi$);
 mergedStreams$.subscribe(
   inStockUrls => areItemsAvailable(inStockUrls) && sendEmail(createEmail(inStockUrls))
 );
