@@ -88,7 +88,7 @@ const areItemsAvailable = items => items.length > 0;
 
 const isItemInStockOnGamesLore = html => {
   const $ = cheerio.load(html);
-  return !$('p[class="stock in-stock"]').length;  
+  return !$('p[class="stock out-of-stock"]').length;  
   //return !$('img[src="v8outofstock.gif"]').length;
 };
 
