@@ -45,7 +45,6 @@ const legendesqueUrls =
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-hills-of-emyn-muil/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-stewards-fear/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',    
-    'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood/',
   ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
