@@ -38,7 +38,12 @@ const createEmail = inStockUrls => {
   }, '')}</ul>`;
 };
 
-const gamesLoreUrls = [];  //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
+const gamesLoreUrls = 
+  [
+    'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',
+  ];  
+//'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
 const ffgSKUs = [
   {
@@ -83,7 +88,8 @@ const areItemsAvailable = items => items.length > 0;
 
 const isItemInStockOnGamesLore = html => {
   const $ = cheerio.load(html);
-  return !$('img[src="v8outofstock.gif"]').length;
+  return !$('p[class='stock in-stock"]').length;  
+  //return !$('img[src="v8outofstock.gif"]').length;
 };
 
 const isItemInStockOnFfg = responseData => responseData['in_stock'] === 'available';
