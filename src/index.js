@@ -90,7 +90,7 @@ const ffgSKUs = [
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
 const areItemsAvailable = items => items.length > 0;
 
-const isItemInStockOnGamesLore = html => {
+const isItemInStockOnLegendesque = html => {
   const $ = cheerio.load(html);
   return !$('p[class="stock out-of-stock"]').length;  
   //return !$('img[src="v8outofstock.gif"]').length;
@@ -98,11 +98,11 @@ const isItemInStockOnGamesLore = html => {
 
 const isItemInStockOnFfg = responseData => responseData['in_stock'] === 'available';
 
-// GamesLore scraper stream
+// Legendesque scraper stream
 const legendesque$ = from(legendesqueUrls).pipe(
   map(url => from(axios.get(url))),
   mergeAll(),
-  filter(response => isResponseSuccessful(response) && isItemInStockOnGamesLore(response.data)),
+  filter(response => isResponseSuccessful(response) && isItemInStockOnLegendesque(response.data)),
   map(inStockResponse => inStockResponse.config.url),
   toArray()
 );
