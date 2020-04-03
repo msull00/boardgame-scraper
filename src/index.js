@@ -40,9 +40,10 @@ const createEmail = inStockUrls => {
 
 const legendesqueUrls = 
   [
-    'https://legendesque.com/product/lord-of-the-rings-lcg-fog-of-the-barrow-downs/',
+ /*   'https://legendesque.com/product/lord-of-the-rings-lcg-fog-of-the-barrow-downs/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-stewards-fear/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',    
+  */
     ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
@@ -71,7 +72,7 @@ const ffgSKUs = [
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood/',
   },
-  */
+  
    {
     sku: 'MEC18',
     url:
@@ -89,6 +90,7 @@ const ffgSKUs = [
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-lord-of-the-rings-fog-on-the-barrow-downs/',
   },
+  */
 ];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
