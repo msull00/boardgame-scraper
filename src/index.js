@@ -49,7 +49,7 @@ const legendesqueUrls =
     'https://legendesque.com/product/lord-of-the-rings-lcg-a-journey-to-rhosgobel-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-hills-of-emyn-muil-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-dead-marshes-nightmare-deck/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood-nightmare-deck/'
     ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
@@ -117,7 +117,7 @@ const ffgSKUs = [
     sku: 'uMEN09',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood-1/',
-   },
+   }
 ];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
