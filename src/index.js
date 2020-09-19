@@ -8,16 +8,32 @@ require('dotenv').config();
 const sendEmail = async html => {
   try {
     let transporter = nodemailer.createTransport({
-      service: 'Gmail',
+     /* service: 'Gmail',
       auth: {
         user: process.env.SCRAPER_USERNAME,
         pass: process.env.SCRAPER_PASSWORD,
-      },
+        
+
+      },*/
+      
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+    auth: {
+      type: 'OAuth2',
+      user: process.env.SCRAPER_EMAIL,
+      clientId: process.env.SCRAPER_CLIENT_ID,
+      clientSecret: process.env.SCRAPER_CLIENT_SECRET,
+      refreshToken: process.env.SCRAPER_REFRESH_TOKEN,
+      accessToken: process.env.SCRAPER_ACCESS_TOKEN,
+      expires: 3599
+    },
+      
     });
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: process.env.SCRAPER_USERNAME, // sender address
+      from: process.env.SCRAPER_EMAIL, // sender address
       to: process.env.SCRAPER_TARGET_EMAIL, // list of receivers
       subject: 'FFG/Legendesque items in stock!', // Subject line
       html,
