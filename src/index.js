@@ -40,56 +40,86 @@ const createEmail = inStockUrls => {
 
 const legendesqueUrls = 
   [
-    'https://legendesque.com/product/lord-of-the-rings-lcg-fog-of-the-barrow-downs/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-the-stewards-fear/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-the-dread-realm/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-the-long-dark/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-battle-of-lake-town/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-murder-at-the-prancing-pony/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-passage-through-mirkwood-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-journey-down-the-anduin-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-escape-from-dol-guldur-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-hunt-for-gollum-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-conflict-at-the-carrock-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-a-journey-to-rhosgobel-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-hills-of-emyn-muil-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-dead-marshes-nightmare-deck/',
+    'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood-nightmare-deck/',
     ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
 const ffgSKUs = [
- /* 
-  {
-    sku: 'MEC73',
+   {
+    sku: 'uMEC35',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/lord-rings-living-card-game-limited-collectors-edition/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-battle-of-lake-town/',
+  },
+  
+  {
+    sku: 'uMEC64',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/murder-prancing-pony/',
+  },
+  
+  {
+    sku: 'uMEN01',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/passage-through-mirkwood/',
   },
  
   {
-    sku: 'MEC03',
+    sku: 'uMEN02',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/conflict-at-the-carrock/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/journey-along-the-anduin/',
   },
   
-   {
-    sku: 'MEC05',
+  {
+    sku: 'uMEN03',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/escape-from-dol-guldur/',
   },
   
-   {
-    sku: 'MEC07',
+  {
+    sku: 'uMEN04',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood/',
-  },
-  */
-   {
-    sku: 'MEC18',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-stewards-fear/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hunt-for-gollum-1/',
   },
   
-   {
-    sku: 'MEC44',
+  {
+    sku: 'uMEN05',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/dread-realm/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/conflict-at-the-carrock-1/',
+  },
+  
+  {
+    sku: 'uMEN06',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/a-journey-to-rhosgobel-1/',
   },      
    
-   {
-    sku: 'uMEC36',
+  {
+    sku: 'uMEN07',
     url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-lord-of-the-rings-fog-on-the-barrow-downs/',
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil-1/',
   },
+ 
+  {
+    sku: 'uMEN08',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-hills-of-emyn-muil-1/',
+   },      
+   
+   {
+    sku: 'uMEN09',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood-1/',
+   },
 ];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
