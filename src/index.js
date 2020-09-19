@@ -39,7 +39,7 @@ const createEmail = inStockUrls => {
 };
 
 const legendesqueUrls = 
-  [
+  [ /*
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-battle-of-lake-town/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-murder-at-the-prancing-pony/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-passage-through-mirkwood-nightmare-deck/',
@@ -51,6 +51,7 @@ const legendesqueUrls =
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-hills-of-emyn-muil-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-dead-marshes-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-return-to-mirkwood-nightmare-deck/',
+    */
     ];  
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
@@ -119,6 +120,12 @@ const ffgSKUs = [
     sku: 'uMEN09',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood-1/',
+   },
+  
+   {
+    sku: 'uMEC36',
+    url:
+      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-lord-of-the-rings-fog-on-the-barrow-downs/',
    },
 ];
 
