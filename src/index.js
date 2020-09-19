@@ -8,11 +8,18 @@ require('dotenv').config();
 const sendEmail = async html => {
   try {
     let transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      /*service: 'Gmail',
       auth: {
         user: process.env.SCRAPER_USERNAME,
         pass: process.env.SCRAPER_PASSWORD,
       },
+      */
+       host: 'smtp.ethereal.email',
+       port: 587,
+       auth: {
+              user: 'olaf.stiedemann@ethereal.email',
+              pass: 'p7gZa2X1Nb5yuewarp'
+       }
     });
 
     // setup email data with unicode symbols
