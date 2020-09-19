@@ -39,7 +39,9 @@ const createEmail = inStockUrls => {
 };
 
 const legendesqueUrls = 
-  [ /*
+  [
+    'https://legendesque.com/product/lord-of-the-rings-lcg-the-long-dark/',
+    /*
     'https://legendesque.com/product/lord-of-the-rings-lcg-the-battle-of-lake-town/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-murder-at-the-prancing-pony/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-passage-through-mirkwood-nightmare-deck/',
@@ -57,6 +59,12 @@ const legendesqueUrls =
 
 const ffgSKUs = [
    {
+     sku: 'uMEC36',
+     url:
+       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-lord-of-the-rings-fog-on-the-barrow-downs/',
+   },
+/*
+  {
     sku: 'uMEC35',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-battle-of-lake-town/',
@@ -121,12 +129,7 @@ const ffgSKUs = [
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/return-to-mirkwood-1/',
    },
-  
-   {
-    sku: 'uMEC36',
-    url:
-      'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-lord-of-the-rings-fog-on-the-barrow-downs/',
-   },
+  */
 ];
 
 const isResponseSuccessful = response => response.status === 200 && Boolean(response.data);
