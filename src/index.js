@@ -56,8 +56,8 @@ const createEmail = inStockUrls => {
 
 const legendesqueUrls = 
   [
-    'https://legendesque.com/product/lord-of-the-rings-lcg-the-battle-of-lake-town/',
-    'https://legendesque.com/product/lord-of-the-rings-lcg-murder-at-the-prancing-pony/',
+    //'https://legendesque.com/product/lord-of-the-rings-lcg-the-battle-of-lake-town/',
+    //'https://legendesque.com/product/lord-of-the-rings-lcg-murder-at-the-prancing-pony/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-passage-through-mirkwood-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-journey-down-the-anduin-nightmare-deck/',
     'https://legendesque.com/product/lord-of-the-rings-lcg-escape-from-dol-guldur-nightmare-deck/',
@@ -71,7 +71,7 @@ const legendesqueUrls =
 //'https://www.gameslore.com/acatalog/PR_The_Lord_Of_The_Rings_LCG_Shadow_And_Flame_Adventure_Pack.html',
 
 const ffgSKUs = [
-   {
+   /*{
     sku: 'uMEC35',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/the-battle-of-lake-town/',
@@ -81,7 +81,7 @@ const ffgSKUs = [
     sku: 'uMEC64',
     url:
       'https://www.fantasyflightgames.com/en/products/the-lord-of-the-rings-the-card-game/products/murder-prancing-pony/',
-  },
+  },*/
   
   {
     sku: 'uMEN01',
